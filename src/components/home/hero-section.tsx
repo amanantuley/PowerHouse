@@ -14,8 +14,8 @@ const HeroSection = () => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       // Define a scroll distance over which the animation should complete.
-      // Let's use twice the viewport height for a more controlled effect.
-      const animationScrollDistance = window.innerHeight * 2; 
+      // A smaller value (e.g., window.innerHeight) will make the animation faster.
+      const animationScrollDistance = window.innerHeight; 
 
       // Calculate scroll fraction, capped at 1
       const scrollFraction = Math.min(1, scrollY / animationScrollDistance);
