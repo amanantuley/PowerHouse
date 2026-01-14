@@ -8,22 +8,25 @@ import { useState, useEffect, useRef } from 'react';
 const HeroSection = () => {
   const [frame, setFrame] = useState(1);
   const heroContainerRef = useRef<HTMLDivElement>(null);
+  const [containerHeight, setContainerHeight] = useState('100vh');
+
   const totalFrames = 40;
+  const animationDuration = 2000;
 
   useEffect(() => {
+    // This code now runs only on the client
+    setContainerHeight(`${animationDuration + window.innerHeight}px`);
+    
     const handleScroll = () => {
       const heroContainer = heroContainerRef.current;
       if (!heroContainer) return;
 
-      const { top, height } = heroContainer.getBoundingClientRect();
-      const scrollableHeight = height - window.innerHeight;
+      const { top } = heroContainer.getBoundingClientRect();
       
-      // Calculate scroll progress within the container (0 to 1)
-      const scrollProgress = Math.max(0, Math.min(1, -top / scrollableHeight));
+      const scrollProgress = Math.max(0, Math.min(1, -top / animationDuration));
       
       let newFrame = Math.floor(scrollProgress * (totalFrames - 1)) + 1;
       
-      // Ensure the frame is always between 1 and totalFrames
       newFrame = Math.max(1, Math.min(newFrame, totalFrames));
 
       setFrame(newFrame);
@@ -43,7 +46,7 @@ const HeroSection = () => {
   const imageUrl = `/sequence/ezgif-frame-${frame.toString().padStart(3, '0')}.jpg`;
 
   return (
-    <div ref={heroContainerRef} className="relative h-[200vh] w-full">
+    <div ref={heroContainerRef} style={{ height: containerHeight }} className="relative w-full">
       <div className="sticky top-0 h-screen w-full flex items-center justify-center text-white overflow-hidden">
         <div
           style={{ backgroundImage: `url(${imageUrl})` }}
