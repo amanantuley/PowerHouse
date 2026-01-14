@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['"Space Grotesk"', 'sans-serif'],
-        headline: ['Anton', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        headline: ['Oswald', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
