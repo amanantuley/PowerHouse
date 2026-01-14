@@ -18,7 +18,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['"Space Grotesk"', 'sans-serif'],
-        headline: ['"Space Grotesk"', 'sans-serif'],
+        headline: ['Anton', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
@@ -95,17 +95,36 @@ export default {
             height: '0',
           },
         },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
         'fade-in-up': {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'slide-in-from-left': {
+          '0%': { transform: 'translateX(-20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        'slide-in-from-right': {
+          '0%': { transform: 'translateX(20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in': 'fade-in 0.5s ease-out forwards',
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+        'slide-in-from-left': 'slide-in-from-left 0.5s ease-out forwards',
+        'slide-in-from-right': 'slide-in-from-right 0.5s ease-out forwards',
+      },
+      textShadow: {
+        DEFAULT: '0 2px 4px rgba(0,0,0,0.5)',
+        lg: '0 4px 8px rgba(0,0,0,0.5)',
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'), require('tailwindcss-textshadow')],
 } satisfies Config;

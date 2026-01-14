@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -13,20 +13,32 @@ import Logo from '@/components/shared/logo';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
+    <header className={cn(
+      "sticky top-0 z-50 w-full transition-all duration-300",
+      isScrolled ? "border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" : "bg-transparent"
+    )}>
+      <div className="container flex h-20 items-center">
         <Logo />
         
-        <nav className="hidden flex-1 md:flex md:justify-center md:items-center md:gap-6 text-sm">
+        <nav className="hidden flex-1 md:flex md:justify-center md:items-center md:gap-1 text-sm">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                'transition-colors hover:text-primary',
+                'px-4 py-2 rounded-full transition-colors hover:text-primary hover:bg-white/5',
                 pathname === link.href ? 'text-primary font-semibold' : 'text-foreground/80'
               )}
             >
@@ -39,7 +51,7 @@ export default function Header() {
           <Button asChild className="hidden md:inline-flex" variant="ghost">
             <Link href="/contact">Login</Link>
           </Button>
-          <Button asChild className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button asChild className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-full">
             <Link href="/membership">Join Now</Link>
           </Button>
           
@@ -78,7 +90,7 @@ export default function Header() {
                   <Button asChild variant="ghost" size="lg">
                     <Link href="/contact">Login</Link>
                   </Button>
-                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full">
                     <Link href="/membership">Join Now</Link>
                   </Button>
                 </div>

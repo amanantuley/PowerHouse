@@ -8,7 +8,7 @@ const HeroSection = () => {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-bg');
 
   return (
-    <section className="relative h-[calc(100vh-4rem)] w-full flex items-center justify-center text-white">
+    <section className="relative h-screen w-full flex items-center justify-center text-white">
       {heroImage && (
         <Image
           src={heroImage.imageUrl}
@@ -19,18 +19,18 @@ const HeroSection = () => {
           data-ai-hint={heroImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/70" />
       <div className="relative z-10 text-center px-4 animate-fade-in-up">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-4 text-shadow-lg font-headline">
-          UNLEASH YOUR
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter mb-4 text-shadow-lg font-headline uppercase">
+          Unleash Your
           <br />
-          <span className="text-primary">INNER BEAST</span>
+          <span className="text-primary">Inner Beast</span>
         </h1>
         <p className="max-w-2xl mx-auto mb-8 text-lg md:text-xl text-neutral-300">
           Where strength is forged, limits are shattered, and legends are born.
           Your transformation starts now.
         </p>
-        <div className="flex gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-lg transition-transform hover:scale-105">
             <Link href="/membership">
               Join The Pack

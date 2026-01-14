@@ -8,8 +8,8 @@ type LogoProps = {
 
 const Logo = ({ className }: LogoProps) => {
   return (
-    <Link href="/" className={cn('flex items-center gap-2 text-xl font-bold tracking-wider text-white', className)}>
-      <Dumbbell className="h-7 w-7 text-primary" />
+    <Link href="/" className={cn('flex items-center gap-2 text-2xl font-bold tracking-wider text-white', className)}>
+      <Dumbbell className="h-8 w-8 text-primary" />
       <span className="font-headline">
         POWER<span className="text-primary">HOUSE</span>
       </span>
