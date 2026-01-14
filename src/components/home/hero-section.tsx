@@ -13,12 +13,16 @@ const HeroSection = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      // Animate over the first 80% of the page scroll for a smoother effect
-      const scrollFraction = Math.min(1, scrollY / (docHeight * 0.8)); 
+      // Define a scroll distance over which the animation should complete.
+      // Let's use twice the viewport height for a more controlled effect.
+      const animationScrollDistance = window.innerHeight * 2; 
+
+      // Calculate scroll fraction, capped at 1
+      const scrollFraction = Math.min(1, scrollY / animationScrollDistance);
       
-      let newFrame = Math.ceil(scrollFraction * (totalFrames - 1)) + 1;
-      newFrame = Math.max(1, Math.min(newFrame, totalFrames));
+      // Calculate the frame number
+      let newFrame = Math.floor(scrollFraction * (totalFrames - 1)) + 1;
+      newFrame = Math.max(1, Math.min(newFrame, totalFrames)); // Ensure it's within 1-40
 
       setFrame(newFrame);
     };
