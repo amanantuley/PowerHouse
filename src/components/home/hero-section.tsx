@@ -14,8 +14,8 @@ const HeroSection = () => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      // Animate over the first 25% of the page scroll
-      const scrollFraction = Math.min(1, scrollY / (docHeight * 0.25)); 
+      // Animate over the first 80% of the page scroll for a smoother effect
+      const scrollFraction = Math.min(1, scrollY / (docHeight * 0.8)); 
       
       let newFrame = Math.ceil(scrollFraction * (totalFrames - 1)) + 1;
       newFrame = Math.max(1, Math.min(newFrame, totalFrames));
