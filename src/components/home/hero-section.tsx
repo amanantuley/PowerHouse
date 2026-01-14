@@ -1,26 +1,51 @@
+'use client';
+
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ChevronRight } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
 
 const HeroSection = () => {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-bg');
+  const [frame, setFrame] = useState(1);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const totalFrames = 40;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      // Animate over the first 25% of the page scroll
+      const scrollFraction = Math.min(1, scrollY / (docHeight * 0.25)); 
+      
+      let newFrame = Math.ceil(scrollFraction * (totalFrames - 1)) + 1;
+      newFrame = Math.max(1, Math.min(newFrame, totalFrames));
+
+      setFrame(newFrame);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Preload images
+    for (let i = 1; i <= totalFrames; i++) {
+      const img = new Image();
+      img.src = `/sequence/ezgif-frame-${i.toString().padStart(3, '0')}.jpg`;
+    }
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const imageUrl = `/sequence/ezgif-frame-${frame.toString().padStart(3, '0')}.jpg`;
 
   return (
-    <section className="relative h-screen w-full flex items-center justify-center text-white">
-      {heroImage && (
-        <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
-          fill
-          className="object-cover"
-          priority
-          data-ai-hint={heroImage.imageHint}
+    <section ref={heroRef} className="relative h-screen w-full flex items-center justify-center text-white">
+      <div className="sticky top-0 h-screen w-full">
+         <div
+          style={{ backgroundImage: `url(${imageUrl})` }}
+          className="h-full w-full bg-cover bg-center"
         />
-      )}
-      <div className="absolute inset-0 bg-black/70" />
-      <div className="relative z-10 text-center px-4 animate-fade-in-up">
+      </div>
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute z-10 text-center px-4 animate-fade-in-up">
         <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter mb-4 text-shadow-lg font-headline uppercase">
           Unleash Your
           <br />
