@@ -1,3 +1,166 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Dark gym interior with weights",
+      "imageUrl": "https://images.unsplash.com/photo-1603665409265-bdc00027c217?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxneW0lMjBkYXJrfGVufDB8fHx8MTc2ODM4NTg4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gym dark"
+    },
+    {
+      "id": "about-us",
+      "description": "People working out in a gym",
+      "imageUrl": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxneW0lMjB3b3Jrb3V0fGVufDB8fHx8MTc2ODM3MzkxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gym workout"
+    },
+    {
+      "id": "facility-cardio",
+      "description": "Row of treadmills",
+      "imageUrl": "https://images.unsplash.com/photo-1716367840407-f9414a84b325?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxneW0lMjB0cmVhZG1pbGxzfGVufDB8fHx8MTc2ODM4NTg4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gym treadmills"
+    },
+    {
+      "id": "facility-weights",
+      "description": "Weightlifting area with barbells",
+      "imageUrl": "https://images.unsplash.com/photo-1653927956711-f2222a45e040?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z3ltJTIwd2VpZ2h0c3xlbnwwfHx8fDE3NjgzMTY5MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gym weights"
+    },
+    {
+      "id": "facility-functional",
+      "description": "Functional training area with kettlebells",
+      "imageUrl": "https://images.unsplash.com/photo-1758875570080-331859e7418f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxneW0lMjBmdW5jdGlvbmFsfGVufDB8fHx8MTc2ODM4NTg4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gym functional"
+    },
+    {
+      "id": "facility-yoga",
+      "description": "Calm yoga and stretching area",
+      "imageUrl": "https://images.unsplash.com/photo-1615657973599-990d6e05fb8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx5b2dhJTIwc3R1ZGlvfGVufDB8fHx8MTc2ODMxNzM1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yoga studio"
+    },
+    {
+      "id": "trainer-1",
+      "description": "Male fitness trainer smiling",
+      "imageUrl": "https://images.unsplash.com/photo-1704223523493-a7f523cf000e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwdHJhaW5lcnxlbnwwfHx8fDE3NjgzMDE2NjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male trainer"
+    },
+    {
+      "id": "trainer-2",
+      "description": "Female fitness trainer posing",
+      "imageUrl": "https://images.unsplash.com/photo-1512291313931-d4291048e7b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmZW1hbGUlMjB0cmFpbmVyfGVufDB8fHx8MTc2ODMwMTY2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female trainer"
+    },
+    {
+      "id": "trainer-3",
+      "description": "Male trainer coaching a client",
+      "imageUrl": "https://images.unsplash.com/photo-1591258370814-01609b341790?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb25hbCUyMHRyYWluaW5nfGVufDB8fHx8MTc2ODI5NDE5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "personal training"
+    },
+    {
+      "id": "trainer-4",
+      "description": "Female yoga instructor",
+      "imageUrl": "https://images.unsplash.com/photo-1575052814074-c05122e0a17a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx5b2dhJTIwaW5zdHJ1Y3RvcnxlbnwwfHx8fDE3NjgzODU4ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yoga instructor"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Wide shot of the gym floor",
+      "imageUrl": "https://images.unsplash.com/photo-1681474188070-09dae89b0b0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxneW0lMjBmbG9vcnxlbnwwfHx8fDE3NjgzODU4ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gym floor"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Close up on dumbbells rack",
+      "imageUrl": "https://images.unsplash.com/photo-1584863431255-3997371dcc01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkdW1iYmVsbHMlMjByYWNrfGVufDB8fHx8MTc2ODM4NTg4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dumbbells rack"
+    },
+    {
+      "id": "gallery-3",
+      "description": "Person doing a deadlift",
+      "imageUrl": "https://images.unsplash.com/photo-1758875569256-f37c438cac65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZWFkbGlmdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjgzODU4ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "deadlift person"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Group fitness class in session",
+      "imageUrl": "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmaXRuZXNzJTIwY2xhc3N8ZW58MHx8fHwxNzY4MzI2MTAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fitness class"
+    },
+    {
+      "id": "gallery-5",
+      "description": "Person on a stationary bike",
+      "imageUrl": "https://images.unsplash.com/photo-1707985287164-c84627ad6eba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdGF0aW9uYXJ5JTIwYmlrZXxlbnwwfHx8fDE3NjgyNzA1MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stationary bike"
+    },
+    {
+      "id": "gallery-6",
+      "description": "Locker room view",
+      "imageUrl": "https://images.unsplash.com/photo-1637028251652-cdef2b2b6100?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsb2NrZXIlMjByb29tfGVufDB8fHx8MTc2ODM0MjY1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "locker room"
+    },
+    {
+      "id": "gallery-7",
+      "description": "Protein shake at the juice bar",
+      "imageUrl": "https://images.unsplash.com/photo-1675897275724-202ce4be4f23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcm90ZWluJTIwc2hha2V8ZW58MHx8fHwxNzY4MzMxMDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "protein shake"
+    },
+    {
+      "id": "gallery-8",
+      "description": "Early morning workout session",
+      "imageUrl": "https://images.unsplash.com/photo-1687446419302-5f7ef99cd752?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9ybmluZyUyMHdvcmtvdXR8ZW58MHx8fHwxNzY4Mzg1ODgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "morning workout"
+    },
+    {
+      "id": "transformation-1a",
+      "description": "Before photo of a man",
+      "imageUrl": "https://images.unsplash.com/photo-1766104796070-12c5284d7531?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBiZWZvcmV8ZW58MHx8fHwxNzY4Mzg1ODgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man before"
+    },
+    {
+      "id": "transformation-1b",
+      "description": "After photo of a fit man",
+      "imageUrl": "https://images.unsplash.com/photo-1737155398447-c66ead43d58f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBhZnRlcnxlbnwwfHx8fDE3NjgzODU4ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man after"
+    },
+    {
+      "id": "transformation-2a",
+      "description": "Before photo of a woman",
+      "imageUrl": "https://images.unsplash.com/photo-1609980431579-9c28eb579400?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMGJlZm9yZXxlbnwwfHx8fDE3NjgzODU4ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman before"
+    },
+    {
+      "id": "transformation-2b",
+      "description": "After photo of a fit woman",
+      "imageUrl": "https://images.unsplash.com/photo-1589918528838-d8b54ac729d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMGFmdGVyfGVufDB8fHx8MTc2ODM4NTg4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman after"
+    },
+    {
+      "id": "transformation-3a",
+      "description": "Before photo of a person",
+      "imageUrl": "https://images.unsplash.com/photo-1641376028786-da6f7d7897d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJzb24lMjBiZWZvcmV8ZW58MHx8fHwxNzY4Mzg1ODgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person before"
+    },
+    {
+      "id": "transformation-3b",
+      "description": "After photo of a fit person",
+      "imageUrl": "https://images.unsplash.com/photo-1633260678199-b29d97e1ac77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjBhZnRlcnxlbnwwfHx8fDE3NjgzODU4ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person after"
+    },
+    {
+      "id": "blog-1",
+      "description": "Healthy meal preparation",
+      "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwZm9vZHxlbnwwfHx8fDE3NjgyODQ4MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "healthy food"
+    },
+    {
+      "id": "blog-2",
+      "description": "Stretching exercises",
+      "imageUrl": "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdHJldGNoaW5nJTIwZXhlcmNpc2V8ZW58MHx8fHwxNzY4Mzg1ODgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stretching exercise"
+    },
+    {
+      "id": "blog-3",
+      "description": "Person drinking water",
+      "imageUrl": "https://images.unsplash.com/photo-1617404962988-b0d6a45b2d20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZHJpbmtpbmclMjB3YXRlcnxlbnwwfHx8fDE3NjgzODU4ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "drinking water"
+    }
+  ]
 }
