@@ -13,23 +13,25 @@ const HeroSection = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      // Define a scroll distance over which the animation should complete.
-      // A smaller value (e.g., window.innerHeight) will make the animation faster.
+      // The animation will complete when the user has scrolled down the equivalent of the viewport height.
       const animationScrollDistance = window.innerHeight; 
 
-      // Calculate scroll fraction, capped at 1
-      const scrollFraction = Math.min(1, scrollY / animationScrollDistance);
+      // Calculate scroll fraction, capped between 0 and 1.
+      const scrollFraction = Math.max(0, Math.min(1, scrollY / animationScrollDistance));
       
-      // Calculate the frame number
-      let newFrame = Math.floor(scrollFraction * (totalFrames - 1)) + 1;
-      newFrame = Math.max(1, Math.min(newFrame, totalFrames)); // Ensure it's within 1-40
+      // Calculate the frame number. 
+      // We use totalFrames here instead of totalFrames - 1 to ensure the last frame is shown.
+      let newFrame = Math.floor(scrollFraction * totalFrames);
+      
+      // Clamp the frame number between 1 and totalFrames.
+      newFrame = Math.max(1, Math.min(newFrame, totalFrames));
 
       setFrame(newFrame);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
 
-    // Preload images
+    // Preload images to ensure smooth animation
     for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
       img.src = `/sequence/ezgif-frame-${i.toString().padStart(3, '0')}.jpg`;
